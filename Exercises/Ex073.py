@@ -32,4 +32,7 @@ for item in ordem_alfabetica:
     print(item)
 
 print('==' * 20)
-print()
+print(f'O Bahia está na {leaderboard.index("Bahia") + 1}ª posição.')
+print('==' * 20)
+
+print('{:~^40}'.format("FIM DO PROGRAMA"))
