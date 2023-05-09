@@ -25,7 +25,7 @@ c = b + a # quando 'somamos uma tupla' ela não soma de verdade, ela agrega, jun
 print(c)
 print(len(c)) # aqui diz qual o tamanho dessa tupla.
 print(c.count(5)) # aqui eu descubro quando vezes aparece o número 5 na minha tupla.
-print(c.index(2)) # aqui me onde está a primeira posição que o 2 aparece.
+print(c.index(2)) # aqui me diz onde está a primeira posição que o 2 aparece.
 print(c.index(5, 1)) # aqui eu procurei onde estava o primeiro 5, partindo da posição 1, ou seja se eu tirar o um do código a resposta seria posição 0 pois tem um 5 na posição 0, mas como eu especifiquei que quero que começe da posição 1 para frente, ele só achará o próximo 5 que está na posição 5
 print('=' * 30)
 
