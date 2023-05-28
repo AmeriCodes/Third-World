@@ -6,15 +6,30 @@
 
 peaple = list()
 data = list()
-heavy = 0
-light = 0
+heavy = light = weight = 0
 heavy_person = []
 light_person = []
+name = ' '
 
 while True:
     try:
-        data.append(str(input('Nome: ')))
-        data.append(float(input('Peso: ')))
+        while True:
+            nome = input('Nome: ')
+            if nome.isalpha():
+                data.append(nome)
+                break
+            else:
+                print("Entrada inválida. Por favor, digite apenas letras.")
+        
+        while True:
+            weight = input('Peso: ')
+            if weight.isnumeric():
+                weight = float(weight)
+                data.append(weight)
+                break
+            else:
+                print("Entrada inválida. Por favor, digite apenas números.")
+
         peaple.append(data[:])
         
         if len(peaple) == 1:
