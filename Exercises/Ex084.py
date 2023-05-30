@@ -14,19 +14,19 @@ while True:
     try: # O try e o except são são utilizados aqui caso haja algum erro de conversão do weight para float já que a validação do name e do weight estão sendo feitas pelo laço while True:.
         while True:
             name = input('Nome: ')
-            if name.isalpha(): # Função que garante que o digitado será apenas letras.
+            if name.replace(" ", "").isalpha(): # Verifica se são letras ou espaços em branco
                 data.append(name)
                 break
             else:
                 print("Entrada inválida. Por favor, digite apenas letras.")
+
         
         while True:
-            weight = input('Peso: ')
-            if weight.isnumeric(): # Função que garante que o digitado será apenas números.
-                weight = float(weight) # Conversão para float por estética.
+            try:
+                weight = float(input('Peso: '))
                 data.append(weight)
                 break
-            else:
+            except:
                 print("Entrada inválida. Por favor, digite apenas números.")
 
         peaple.append(data[:]) # Cópia da sub lista para a final
@@ -43,7 +43,7 @@ while True:
             elif data[1] < light:
                 light = data[1]
                 light_person = [data[0]]
-            elif data[1] == heavy and data[1] == light: # Caso fosse digitado várias pessoas com o mesmo peso o programa deveria entender e colocar todas elas nas listas de mais pesadas e mais leves, mas ele não estava acontecendo, então esse 'elif' foi adicionado depois para tentar remediar esse erro.
+            elif data[1] == heavy and data[1] == light: # Caso fosse digitado várias pessoas com o mesmo peso o programa deveria entender e colocar todas elas nas listas de mais pesadas e mais leves, mas não estava acontecendo, então esse 'elif' foi adicionado depois para tentar remediar esse erro.
                 heavy_person.append(data[0])
                 light_person.append(data[0])
             elif data[1] == heavy:
