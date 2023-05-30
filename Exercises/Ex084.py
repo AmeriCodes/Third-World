@@ -11,7 +11,6 @@ heavy_person = []
 light_person = []
 
 while True:
-    try: # O try e o except são são utilizados aqui caso haja algum erro de conversão do weight para float já que a validação do name e do weight estão sendo feitas pelo laço while True:.
         while True:
             name = input('Nome: ')
             if name.replace(" ", "").isalpha(): # Verifica se são letras ou espaços em branco
@@ -19,8 +18,7 @@ while True:
                 break
             else:
                 print("Entrada inválida. Por favor, digite apenas letras.")
-
-        
+      
         while True:
             try:
                 weight = float(input('Peso: '))
@@ -50,6 +48,7 @@ while True:
                 heavy_person.append(data[0])
             elif data[1] == light:
                 light_person.append(data[0])
+                
         data.clear() # limpeza da sub-lista
         
         answer = " "
@@ -59,8 +58,6 @@ while True:
         else:
             while answer != 's': # Validação de erro.
                 answer = str(input('Digite "S" se deseja continuar e "N" se não. '))[0]
-    except ValueError:
-        print('Entrada errada, tente de novo')
         
 print(f'{len(peaple)} pessoas foram cadastradas')
 print(f'O maior peso foi {heavy}Kg. Peso de {heavy_person}')
