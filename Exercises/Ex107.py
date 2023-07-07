@@ -9,4 +9,4 @@ from practicus import numeri
 entrada = float(input('Digite o preço: R$ '))
 print(f'A metade de {entrada} é {numeri.metade(entrada)}')
 print(f'O dobro de {entrada} é {numeri.dobro(entrada)}')
-print(f'Aumentando 10%, temos R${numeri.aumentar(entrada, 10)}')
+print(f'Aumentando 10%, temos {numeri.aumentar(entrada, 10)}')
