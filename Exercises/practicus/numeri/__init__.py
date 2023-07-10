@@ -22,6 +22,20 @@ def real(preco=0, moeda='R$'):
     return f'{moeda}{preco:.2f}'.replace('.',',')
 
 
+def leia_real(msg):
+    valido = False
+        
+    while not valido:   
+        entrada = str(input(msg)).replace(',','.').strip()
+       
+        if entrada.isalpha() or entrada == '':
+            print(f'ERRO: \"{entrada}\" é um preço inválido!')
+        else:
+            valido = True
+            return float(entrada)
+
+        
+
 def resumo(preco=0, taxa_aumento=20, taxa_diminui=20):
     print('-' * 34)
     print('RESUMO DO VALOR'.center(34))
